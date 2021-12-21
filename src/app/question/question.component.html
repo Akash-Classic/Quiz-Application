@@ -1,0 +1,67 @@
+<div class="container">
+    <div class="card">
+        <div >
+            <div class="pull-left">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGyI1Bcl73fLb1bJHXs88ncmOtG80JvDK6Vg&usqp=CAU" width="100" height="100">
+            </div>
+            <div class="pull-right">
+                   <h3>Angular & Typescript Quiz</h3>
+                   <span>Welcome {{ name }}</span>
+            </div>
+        </div>
+   <div >
+    <div class="d-flex justify-content-around py-3">
+        <div class="score">
+              <h4>{{points}} points</h4>
+        </div>
+        <div class="question-remain">
+             <span>Question {{currentQuestion+1}} of {{questionsList.length}}</span>
+        </div>
+        <div class="timer">
+              <h4>{{counter}} sec <img src="https://staticimg.titan.co.in/Titan/Catalog/W0033WA01_1.jpg" width="40" height="35">
+              </h4> 
+            </div>
+       </div>
+           <div class="bar">
+              <mat-progress-bar mode="determinate" value="{{val}}" ></mat-progress-bar>
+    </div>
+     
+    <div *ngIf="!res">
+    <div class="question">
+       <div class="card">
+           <h3 >{{ questionsList[currentQuestion].questionText }}</h3>
+       </div>
+  </div>
+  <div class="options" >
+     <ol *ngFor="let option of questionsList[currentQuestion].options">
+       <li (click)="answer(currentQuestion+1, option)">
+           <div appChangeColor [isCorrect]="option.correct" class="card">
+                 {{option.text}}
+           </div>
+       </li>
+       
+   </ol>
+    </div>
+
+    
+    <div class="d-flex justify-content-between ">
+    <button mat-raised-button color="warn" (click)="previousQuestion()" [disabled]="currentQuestion===0">Previous</button>
+    <button mat-raised-button color="warn" (click)="onRefreshQuiz()"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+    <button mat-raised-button color="warn" (click)="nextQuestion()" >Next</button>
+  </div>
+</div>
+    <div *ngIf="res">
+        <div class="pull-right">
+            <button mat-raised-button color="accent" (click)="onBack()">Back to quiz</button>
+        </div>
+        <img src="https://thumbs.dreamstime.com/b/illustration-calligraphic-inscription-congratulations-vector-element-design-illustration-calligraphic-inscription-149833255.jpg" width="300" height="180">
+         <h1>Congratulations!! {{name}}<br> You have completed this quiz <br> Below is your result: </h1>
+         <p>Total questions attempted: {{ questionsList.length }}</p>
+         <p>Total Correct Answer : {{currectAnswers}}</p>
+         <p> Total Incorrect Answer: {{incorrectAnswers}}</p>
+         <p> Your Score: {{points}}</p>
+     </div>
+
+</div>
+       </div>
+</div>

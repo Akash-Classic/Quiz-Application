@@ -1,0 +1,20 @@
+<div class="container">
+<div class="mat-body-2">Welcome To Quiz Application</div>
+<p>This quiz will contains total 10 questions. Each question carry 10 points</p>
+<mat-list >
+    <h4>Rules: </h4>
+    <mat-list-item >1: Correct question gives you 10 points</mat-list-item>
+    <mat-list-item>2: InCorrect question deducts 5 points</mat-list-item>
+    <mat-list-item >3: You will have 30 seconds to answer a question</mat-list-item>
+  </mat-list>
+<h1>All The Best
+<img src="https://1.bp.blogspot.com/-NBbZRhH2bKU/X-lUxY1Pp1I/AAAAAAAAEOA/e2nQLL4nYTcGDU1z7UmNxAB0hMaMvzycACNcBGAsYHQ/s1280/all%2Bthe%2Bbest%2Bimages%2Bfor%2Bexams%2Bfor%2Bfriend%2Bdownload.jpg" width="70" height="70">
+</h1>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label class="matLabel">Enter Your Name: </mat-label>
+      <input matInput #name >
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="primary" routerLink="/question" (click)="startQuiz()">Start Quiz</button>
+</div>

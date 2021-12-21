@@ -1,0 +1,34 @@
+.container{
+    background-color: lightblue;
+    text-align: auto;
+    font-family: cursive;
+}
+.mat-body-2{
+    color: red;
+    text-align: center;
+    font-family: cursive;
+}
+h4{
+    color: red;
+    font-family: cursive;
+}
+h1{
+    color: red;
+    text-align: center;
+    font-family: cursive;
+}
+ol{
+    font-family: cursive;
+}
+.example-full-width {
+    width: 50%;
+    color: black;
+    
+  }
+  .matLabel{
+      color: black;
+  }
+
+  input{
+    text-decoration-color: chocolate;
+  }
